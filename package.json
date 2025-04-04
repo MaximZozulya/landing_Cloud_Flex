@@ -1,0 +1,23 @@
+{
+  "name": "cloud-flex",
+  "version": "1.0.0",
+  "description": "landing page",
+  "source": "index.html",
+  "scripts": {
+    "sass:watch": "sass --style=expanded --watch styles:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaximZozulya/landing_Cloud_Flex.git"
+  },
+  "author": "Maksim Zozulya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaximZozulya/landing_Cloud_Flex/issues"
+  },
+  "homepage": "https://github.com/MaximZozulya/landing_Cloud_Flex#readme",
+  "devDependencies": {
+    "parcel": "^2.14.4",
+    "sass": "^1.86.3"
+  }
+}
