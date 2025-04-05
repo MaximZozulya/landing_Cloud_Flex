@@ -5,12 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/favicon.png" type="image/png">
     <link rel="stylesheet" href="css/index.css">
     <title>Cloud Flex</title>
   </head>
   <body>
-    hello
+    <header class="header" aria-label="header">
+      <div class="container">
+        <nav class="header__nav nav" aria-label="header navigation">
+          <div class="nav__title">
+            <a href="#" class="nav__title-link">cloud <span>flex</span></a>
+          </div>
+
+          <div class="nav__links">
+            <ul class="nav__links-list list" aria-label="header nav links">
+              <li class="list__item" aria-label="first link">
+                <a class="list__item-link" href="#">about us</a>
+              </li>
+              <li class="list__item" aria-label="second link">
+                <a class="list__item-link" href="#">contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav__covid-wrapper covid">
+            <a class="covid__link" href="#" aria-label="covid-19 update">covid-19 update</a>
+          </div>
+
+          <div class="nav__globe-wrapper globe">
+            <a class="globe__link" href="" aria-label="globe info">
+              <img class="globe__link-icon" src="assets/gloobus.svg" alt="globe image">
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
   </body>
 </html>
