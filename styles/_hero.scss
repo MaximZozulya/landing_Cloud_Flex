@@ -1,0 +1,216 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@use 'placeholders';
+@use 'sass:color';
+
+
+.hero {
+  position: relative;
+  max-width: 1260px;
+  height: 830px;
+  margin: 0 auto;
+  padding: 150px 0 0 0;
+  background: url('../assets/webp/clouds.webp') center/contain no-repeat;
+
+  &__content {
+    position: relative;
+    width: 900px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: v.$media_md) {
+    padding: 110px 15px 0;
+    background: url('../assets/webp/clouds.webp') 0 25%/contain no-repeat;
+  }
+}
+
+.content {
+  &__title {
+    @include m.font(110px, 700, v.$color-black);
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  &__action-btn {
+    width: 380px;
+    height: 80px;
+    background-color: v.$color-black;
+    border-radius: 45px;
+    border: none;
+    cursor: pointer;
+    @include m.font(28px, 500, v.$color-white);
+    @include m.position(absolute, 1, -1, bottom, right, 15px, 0);
+
+    &:hover {
+      background-color: color.adjust(v.$color-black, $alpha: -0.35);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus {
+      outline: 2px solid v.$color-white;
+    }
+  }
+
+  @media (max-width: v.$media_lg) {
+    width: 100%;
+    max-width: 560px;
+    height: 400px;
+
+    &__title {
+      @include m.font(100px, 700, v.$color-black);
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    &__action-btn {
+      @include m.position(absolute, 1, -1, bottom, left, 0, 15px);
+    }
+  }
+
+  @media (max-width: v.$media_md) {
+    width: 100%;
+    max-width: 700px;
+
+    &__title {
+      @include m.font(75px, 700, v.$color-black);
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    &__action-btn {
+      width: 260px;
+      height: 60px;
+      @include m.font(18px, 400, v.$color-white);
+    }
+  }
+
+  @media (max-width: v.$media_sm) {
+    width: 100%;
+    max-width: 350px;
+    height: 280px;
+
+    &__title {
+      @include m.font(45px, 500, v.$color-black);
+      text-transform: uppercase;
+      line-height: 1;
+    }
+  }
+
+  @media (max-width: v.$media_sm) {
+    width: 700px;
+  }
+}
+
+.notify {
+  position: relative;
+  margin: 170px auto 0;
+  width: 680px;
+  height: 60px;
+  background-color: color.adjust(v.$color-white, $alpha: -0.85);
+  border-radius: 20px;
+  @include m.d-flex(end, center, nowrap, row, 10px);
+
+  &__img {
+    width: 126px;
+    height: 198px;
+    @include m.position(absolute, 1, -1, top, left, -75px, -35px);
+  }
+
+  &__content {
+    width: 450px;
+    height: 100%;
+    text-transform: uppercase;
+    @include m.d-flex(center, center, nowrap);
+    @include m.font(14px, 400, v.$color-black);
+    border-right: 1px solid v.$color-white;
+    line-height: 0.95;
+  }
+
+  &__btn {
+    width: 115px;
+    background: none;
+    border: none;
+    text-transform: uppercase;
+    @include m.font(25px, 400, v.$color-black);
+    @extend %hover-light;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus {
+      outline: 2px solid v.$color-white;
+      border-radius: 10px;
+    }
+  }
+
+  @media (max-width: v.$media_lg) {
+    width: 100%;
+    max-width: 450px;
+    margin: 140px auto 0;
+    height: fit-content;
+    @include m.d-flex(start, center, nowrap, column, 0, 0);
+    
+    &__content {
+      width: 100%;
+      padding: 15px 10px 15px 80px;
+      @include m.font(12px, 500, v.$color-black);
+      border-right: none;
+      border-bottom: 1px solid v.$color-white;
+      line-height: 1.3;
+    }
+  
+    &__btn {
+      padding: 15px 0;
+      @include m.font(30px, 400, v.$color-black);
+    }
+  }
+
+
+  @media (max-width: v.$media_sm) {
+    &__img {
+      @include m.position(absolute, 1, -1, top, left, -45px, -15px);
+    }
+
+    &__content {
+      padding: 10px 10px 10px 100px;
+      @include m.font(12px, 500, v.$color-black);
+    }
+  }
+}
+
+.scroll {
+  @include m.position(absolute, 1, -1, bottom, left, 200px, 10px);
+
+  &__content {
+    position: relative;
+    @include m.font(16px, 500, v.$color-white);
+    writing-mode: vertical-rl;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      @include m.position(absolute, 1, -1, top, left, 100px, 6px);
+      display: block;
+      width: 1px;
+      height: 75px;
+      background-color: v.$color-white;
+    }
+  }
+
+  @media (max-width: v.$media_lg) {
+    @include m.position(absolute, 1, -1, bottom, left, 70px, 20px);
+  }
+
+  @media (max-width: v.$media_md) {
+    @include m.position(absolute, 1, -1, bottom, left, 130px, 20px);
+  }
+
+  @media (max-width: v.$media_sm) {
+    @include m.position(absolute, 1, -1, bottom, left, 260px, 20px);
+  }
+
+}
