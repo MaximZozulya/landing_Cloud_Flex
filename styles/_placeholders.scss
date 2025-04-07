@@ -6,3 +6,10 @@
     color: v.$color-black;
   }
 }
+
+%hover-light {
+  &:hover {
+    cursor: pointer;
+    color: v.$color-white;
+  }
+}
