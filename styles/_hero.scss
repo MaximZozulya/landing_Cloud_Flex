@@ -90,7 +90,6 @@
   @media (max-width: v.$media_sm) {
     width: 100%;
     max-width: 350px;
-    height: 280px;
 
     &__title {
       @include m.font(45px, 500, v.$color-black);
