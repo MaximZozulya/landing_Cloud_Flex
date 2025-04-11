@@ -1,0 +1,103 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@use 'placeholders';
+@use 'sass:color';
+
+%slider-button {
+  width: 67px;
+  height: 67px;
+  border: none;
+  border-radius: 20px;
+  background-color: color.adjust(v.$color-white, $alpha: -0.85);
+  rotate: 45deg;
+}
+
+%button-icon {
+  width: 36px;
+  height: 23px;
+  rotate: -45deg;
+}
+
+.testimonials {
+  margin: 0 auto;
+  padding: 0 0 100px 0;
+  @include m.d-flex(start, center, nowrap, column, 0, 90px);
+  
+  &__title {
+    @include m.font(60px, 400, v.$color-white);
+
+    @media (max-width: v.$media_md) {
+      @include m.font(35px, 400, v.$color-white);
+    } 
+  }
+}
+
+
+.slider {
+  position: relative;
+  height: 500px;
+
+  &__left-btn {
+   @extend %slider-button;
+   @include m.position(absolute, 1, -1, top, left, 100px, -100px);
+  }
+
+  &__right-btn {
+    @extend %slider-button;
+    @include m.position(absolute, 1, -1, top, right, 100px, -100px);
+  }
+
+  &__left-icon {
+    @extend %button-icon;
+  }
+
+  &__right-icon {
+    @extend %button-icon;
+  }
+
+  &__left-icon:hover,
+  &__right-icon:hover {
+    cursor: pointer;
+    box-shadow: inset 0 0 15px 5 rgba(0,0,0, .15) ;
+  }
+
+  &__points {
+    @include m.position(absolute, 1, -1, bottom, left, 0, 50%);
+    @include m.d-flex(start, center, nowrap, row, 9px, 0);
+    translate: -50% 0;
+
+    &-item {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background-color: v.$color-white;
+
+      &:hover {
+        cursor: pointer;
+        scale: .7;
+        background-color: v.$color-grey;
+      }
+    }
+
+  }
+
+  @media (max-width: v.$media_md) {
+    height: 300px;
+
+    &__left-btn {
+      top: unset;
+      bottom: 0;
+      left: 0;
+    }
+
+    &__right-btn {
+      top: unset;
+      bottom: 0;
+      right: 0;
+    }
+
+    &__points {
+      bottom: 25px;
+    }
+  }
+}

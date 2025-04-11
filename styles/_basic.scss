@@ -2,7 +2,9 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: v.$bg-color;
 }
+
 
 .container {
   max-width: 1440px;
@@ -14,4 +16,9 @@ hr {
   margin: 0;
   height: 1px;
   background-color: v.$color-white;
+}
+
+.swiper {
+  width: 70%;
+  height: 300px;
 }
