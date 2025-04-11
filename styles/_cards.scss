@@ -75,8 +75,6 @@
     height: 220px;
   }
 
-  &__preview {}
-
   &__btn {
     @include m.position(absolute, 1, -1, bottom, left, -20px, -30px);
     width: 120px;
@@ -106,5 +104,39 @@
   &:hover {
     cursor: pointer;
     box-shadow: 0 8px 20px 12px rgba(0, 0, 0, .15), inset 0 -5px 70px rgba(0, 0, 0, 0.2)
+  }
+}
+
+.wave-card {
+  width: 500px;
+  height: 275px;
+  background: url('../assets/card_bg.svg') center / cover no-repeat;
+  @include m.d-flex(start, start, nowrap, column, 0, 35px);
+
+  &__avatar {
+    margin: 15px 0 0 25px;
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 0 0 ;
+  }
+
+  &__quote {
+    margin: 0 50px 0 30px;
+    @include m.font(20px, 400, v.$color-white);
+    line-height: 1.4;
+    text-align: justify;
+  }
+
+  @media (max-width: v.$media_md) {
+    width: 330px;
+    row-gap: 15px;
+    background: url('../assets/card_bg.svg') 50% 0 / contain no-repeat;
+  
+    &__quote {
+      @include m.font(13px, 400, v.$color-white);
+    }
+
   }
 }

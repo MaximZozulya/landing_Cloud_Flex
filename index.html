@@ -20,10 +20,10 @@
 
           <div class="nav__links">
             <ul class="nav__links-list list" aria-label="header nav links">
-              <li class="list__item" aria-label="first link">
+              <li class="list__item">
                 <a class="list__item-link" href="#">about us</a>
               </li>
-              <li class="list__item" aria-label="second link">
+              <li class="list__item">
                 <a class="list__item-link" href="#">contact</a>
               </li>
             </ul>
@@ -131,7 +131,7 @@
           <div class="about">
             <div class="about__quality">
               <h3 class="about__quality-title">High Quality</h3>
-              <p class="about__quality-description" aria-label="quality description">
+              <p class="about__quality-description">
                 We are the leading firm by delivering quality and value to our clients.
                 All our professionals have huge experience of creating comfortable
                 high-quality software. We like what we do.
@@ -140,7 +140,7 @@
             
             <div class="about__touch">
               <h3 class="about__touch-title">Always in touch</h3>
-              <p class="about__touch-description" aria-label="touch description">
+              <p class="about__touch-description">
                 We are always ready to answer your questions.
                 You can call us at the weekends and at night.
                 Also you can have a meeting for personal consultation.
@@ -149,7 +149,7 @@
            
             <div class="about__approach">
               <h3 class="about__approach-title">Individual Approach</h3>
-              <p class="about__approach-description" aria-label="approach description">
+              <p class="about__approach-description">
                 Our company works according to the principle of individual approach to every client.
                 This method lets us to get success in problems of all levels.
               </p>
@@ -167,13 +167,13 @@
           <div class="experience">
             <h2 class="experience__title">Our experience </h2>
             <div class="experience__cards">
-              <figure class="img-card">
+              <figure class="img-card" aria-label="card experience">
                 <h3 class="img-card__title">Serverless Live Streaming</h3>
                 <img  class="img-card__preview" src="assets/webp/experience1.webp" alt="card shooting image">
                 <button class="img-card__btn"><img class="img-card__btn-img" src="assets/arrow.svg" alt="arrow icon"></button>
               </figure>
               
-              <figure class="img-card">
+              <figure class="img-card" aria-label="card experience">
                 <h3 class="img-card__title">
                   <span>Learn about CloudFlex</span>
                   <span>team cases</span></h3>
@@ -181,7 +181,7 @@
                 <button class="img-card__btn"><img class="img-card__btn-img" src="assets/arrow.svg" alt="arrow icon"></button>
               </figure>
               
-              <figure class="img-card">
+              <figure class="img-card" aria-label="card experience">
                 <h3 class="img-card__title">Live streaming from mobile</h3>
                 <img  class="img-card__preview" src="assets/webp/experience3.webp" alt="card streaming image">
                 <button class="img-card__btn"><img class="img-card__btn-img" src="assets/arrow.svg" alt="arrow icon"></button>
@@ -191,6 +191,40 @@
         </div>
       </section>
       <!-- /.experience-section --> 
+
+      <section class="testimonials-section" aria-label="testimonials section">
+        <div class="container">
+          <div class="testimonials">
+            <h2 class="testimonials__title">Testimonials</h2>
+            
+            <div class="testimonials__slider slider">
+              <figure class="wave-card">
+                <img class="wave-card__avatar" src="assets/webp/photo1.webp" alt="user photo">
+                <blockquote class="wave-card__quote" cite="https://clientquote.com">
+                  <p>
+                    Очень хороший отзыв, который оставил довольный клиент. А тут я ещё не придумал что написать, поэтому просто добавил это
+                    предложение.
+                  </p>
+                </blockquote>
+              </figure>
+              <button class="slider__left-btn"><img class="slider__left-icon" src="assets/arrow-left.svg" alt="arrow icon"></button>
+              <button class="slider__right-btn"><img class="slider__right-icon" src="assets/arrow-right.svg" alt="arrow icon"></button>
+              <div class="slider__points">
+                <div class="slider__points-item"></div>
+                  <div class="slider__points-item"></div>
+                  <div class="slider__points-item"></div>
+                  <div class="slider__points-item"></div>
+                  <div class="slider__points-item"></div>
+                  <div class="slider__points-item"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /.testimonials-section -->
+
     </main>
+
+
   </body>
 </html>
