@@ -30,7 +30,7 @@
       align-items: center;
       grid-template-areas: 
                           "analysis design development"
-                          "maintenance testing integration";
+                          "maintenance testing integration" ;
       .card--analysis {
         grid-area: analysis;
         justify-self: start;
